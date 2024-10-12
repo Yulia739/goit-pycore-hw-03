@@ -36,27 +36,3 @@ result = get_upcoming_birthdays(
     ]
 )
 print(result)
-
-
-
-
-def get_anomaly_dates(data):
-    result = []
-    for day_data in data:
-        if day_data["temp"] < -30:
-            result.append({"date": day_data["date"], "wear": "sharfick"})
-        elif day_data["temp"] > 30:
-            result.append({"date": day_data["date"], "wear": "kepka"})
-    return result
-
-
-res_f = get_anomaly_dates(
-    [
-        {"date": "15.03.2024", "temp": -200},
-        {"date": "22.09.2024", "temp": 10},
-        {"date": "05.12.2024", "temp": -5},
-        {"date": "30.07.2024", "temp": 36},
-        {"date": "18.01.2024", "temp": -39},
-    ]
-)
-print(res_f)
